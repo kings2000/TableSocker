@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - Ball
   - Shooter
+  - GoalRight
+  - GoalLeft
   layers:
   - Default
   - TransparentFX
@@ -18,8 +20,8 @@ TagManager:
   - 
   - Shooter
   - Wall
-  - 
-  - 
+  - Ball
+  - Goal
   - 
   - 
   - 

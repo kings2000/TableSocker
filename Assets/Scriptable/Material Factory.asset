@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dcd1ec6095d4b47ac0158240ea4ea9, type: 3}
+  m_Name: Material Factory
+  m_EditorClassIdentifier: 
+  materials:
+  - Name: Chelsea
+    materialId: 0
+    material: {fileID: 2100000, guid: 5c465fb636e9ca04bac3278d25398875, type: 2}
+  - Name: Manu
+    materialId: 1
+    material: {fileID: 2100000, guid: a2e62a4e06c24b34ea3f682aaa72e4a3, type: 2}

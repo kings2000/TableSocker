@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80449564275a45b44bd852c6d152258d, type: 3}
+  m_Name: Formation Factory
+  m_EditorClassIdentifier: 
+  formations:
+  - data: {fileID: 4900000, guid: 6d664c12809ed394490a0b308ec8a414, type: 3}
+    formationId: 0
+  - data: {fileID: 4900000, guid: 979c4e8dfa93aa84eb67088b92409f6c, type: 3}
+    formationId: 1

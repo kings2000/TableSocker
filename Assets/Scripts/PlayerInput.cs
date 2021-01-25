@@ -40,7 +40,8 @@ public class PlayerInput : MonoBehaviour
             if (mouseHit)
             {
                 Vector3 dragDirection = currentSelectedShooter.transform.position - GetMouseWorldPosition();
-                currentSelectedShooter.MoveToward(dragDirection.normalized, dragDistance * forceMultiplyer);
+                if(dragDistance > 0)
+                    currentSelectedShooter.MoveToward(dragDirection.normalized, dragDistance * forceMultiplyer);
                 CloseRenderers();
             }
             mouseHit = false;
@@ -51,10 +52,11 @@ public class PlayerInput : MonoBehaviour
             {
                 Vector3 dragDirection = currentSelectedShooter.transform.position - GetMouseWorldPosition();
 
-                dragDistance -= raduis;
+                
                 dragDistance = dragDirection.magnitude;
                 dragDistance = Mathf.Clamp(dragDistance, raduis, maxDragDistance);
-                
+                dragDistance -= raduis;
+
                 Vector3 arrowOrigin = currentSelectedShooter.transform.position + (dragDirection.normalized * (raduis + .2f));
                 DragFactor(arrowOrigin, -dragDirection, dragDistance * 4f);
             }
@@ -106,9 +108,10 @@ public class PlayerInput : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(screenSpacePosition);
         if(Physics.Raycast(ray, out RaycastHit hit, 1000, touchableMask))
         {
-            currentSelectedShooter = hit.collider.gameObject.GetComponent<Shooter>();
+            currentSelectedShooter = hit.collider.gameObject.GetComponentInParent<Shooter>();
             raduis = currentSelectedShooter.transform.lossyScale.x * .5f;
-            return true;
+            if(currentSelectedShooter.isTurn)
+                return true;
         }
         return false;
     }
