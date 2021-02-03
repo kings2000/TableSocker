@@ -16,6 +16,13 @@ namespace Enums
         Left
     }
 
+    public enum GoalPointID
+    {
+        Right,
+        Center,
+        Left
+    }
+
     public enum FormationId
     {
         f_1,

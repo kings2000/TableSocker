@@ -71,6 +71,6 @@ public class Shooter : MonoBehaviour
     public void MoveToward(Vector3 direction, float force)
     {
         rbody.AddForce(direction * force, ForceMode.Force);
-        MatchHandler.instance.DisableShooterTurn();
+        //MatchHandler.instance.DisableShooterTurn();
     }
 }
